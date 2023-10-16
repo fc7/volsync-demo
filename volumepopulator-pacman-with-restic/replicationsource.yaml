@@ -1,0 +1,17 @@
+apiVersion: volsync.backube/v1alpha1
+kind: ReplicationSource
+metadata:
+  name: backup
+spec:
+  sourcePVC: mongo-storage
+  trigger:
+    manual: once
+  restic:
+    pruneIntervalDays: 1
+    repository: restic-secret
+    retain:
+      hourly: 3
+      daily: 2
+      monthly: 1
+    copyMethod: Snapshot
+    cacheCapacity: 1Gi

@@ -1,0 +1,14 @@
+apiVersion: volsync.backube/v1alpha1
+kind: ReplicationDestination
+metadata:
+  name: restore
+spec:
+  trigger:
+    manual: restore-once
+  restic:
+    repository: restic-secret
+    copyMethod: Snapshot
+    cacheCapacity: 1Gi
+    accessModes:
+    - ReadWriteOnce
+    capacity: 8Gi
