@@ -7,3 +7,4 @@ resources:
 - pacman-route.yaml
 - replicationsource.yaml
 - replicationdestination.yaml
+- external-secret-restic-secret.yaml
