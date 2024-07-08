@@ -15,7 +15,8 @@ spec:
         name: pacman
     spec:
       containers:
-      - image: quay.io/tflower/pacman-nodejs-app:latest
+      #- image: quay.io/tflower/pacman-nodejs-app:latest
+      - image: quay.io/rh_ee_fcharett/pacman:0.1.5
         name: pacman
         ports:
         - containerPort: 8080
